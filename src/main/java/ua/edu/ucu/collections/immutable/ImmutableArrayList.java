@@ -133,7 +133,7 @@ public class ImmutableArrayList implements ImmutableList {
     } //очищує вміст колекції
 
     public boolean isEmpty() {
-        return (this.length == 0);
+        return this.length == 0;
     } //якщо у колеції нема елементів то повертає true
 
     public Object[] toArray() {
