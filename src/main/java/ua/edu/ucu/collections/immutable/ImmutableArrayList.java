@@ -32,9 +32,9 @@ public class ImmutableArrayList implements ImmutableList {
     } //додає елемент у кінець колекції
 
     public ImmutableArrayList add(int index, Object e) {
-        if (index > this.length){
-            throw new IndexOutOfBoundsException("Unable to add element:" +
-                    " index is out of bounds!");
+        if (index > this.length) {
+            throw new IndexOutOfBoundsException("Unable to add element:"
+                    + " index is out of bounds!");
         }
 
         Object[] array = Arrays.copyOf(this.array, this.length+1);
@@ -61,8 +61,8 @@ public class ImmutableArrayList implements ImmutableList {
     public ImmutableArrayList addAll(int index, Object[] c) {
 
         if (index > this.length){
-            throw new IndexOutOfBoundsException("Unable to add element:" +
-                    " index is out of bounds!");
+            throw new IndexOutOfBoundsException("Unable to add element:"
+                    + " index is out of bounds!");
         }
 
         Object[] array = Arrays.copyOf(this.array, this.length+c.length);
@@ -81,16 +81,16 @@ public class ImmutableArrayList implements ImmutableList {
 
     public Object get(int index) {
         if (index >= this.length) {
-            throw new IndexOutOfBoundsException("Unable to add element:" +
-                    " index is out of bounds!");
+            throw new IndexOutOfBoundsException("Unable to add element:"
+                    + " index is out of bounds!");
         }
         return this.array[index];
     }
 
     public ImmutableArrayList remove(int index) {
         if (index >= this.length) {
-            throw new IndexOutOfBoundsException("Unable to add element:" +
-                    " index is out of bounds!");
+            throw new IndexOutOfBoundsException("Unable to add element:"
+                    + " index is out of bounds!");
         }
         Object[] array = Arrays.copyOf(this.array, this.length);
         for (int i = index; i < this.length - 1; i++)
@@ -103,10 +103,10 @@ public class ImmutableArrayList implements ImmutableList {
 
     }
 
-    public ImmutableArrayList set(int index, Object e){
+    public ImmutableArrayList set(int index, Object e) {
         if (index >= this.length) {
-            throw new IndexOutOfBoundsException("Unable to add element:" +
-                    " index is out of bounds!");
+            throw new IndexOutOfBoundsException("Unable to add element:"
+                    + " index is out of bounds!");
         }
         Object[] array = Arrays.copyOf(this.array, this.length);
         array[index] = e;
@@ -115,7 +115,7 @@ public class ImmutableArrayList implements ImmutableList {
     }
 
     public int indexOf(Object e) {
-        for (int i = 0; i < this.length; i++){
+        for (int i = 0; i < this.length; i++) {
             if (this.array[i] == e) {
                 return i;
             }
@@ -147,7 +147,7 @@ public class ImmutableArrayList implements ImmutableList {
     @Override
     public String toString() {
         String out = "[";
-        for (int i = 0; i < this.length; i++){
+        for (int i = 0; i < this.length; i++) {
             out += this.array[i] + "";
             if (i < this.length - 1) {
                 out += ", ";
