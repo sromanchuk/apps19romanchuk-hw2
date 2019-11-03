@@ -46,7 +46,7 @@ public class ImmutableLinkedList {
 
     public ImmutableLinkedList clone() {
         ImmutableLinkedList newList = new ImmutableLinkedList();
-        ImmutableLinkedList.LLNode currNode = this.head;
+//         ImmutableLinkedList.LLNode currNode = this.head;
         ImmutableLinkedList.LLNode newNode;
         Object[] array = this.toArray();
         for (int i = 0; i < array.length; i++) {
