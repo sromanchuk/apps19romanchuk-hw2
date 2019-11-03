@@ -286,7 +286,7 @@ public class ImmutableLinkedList {
 
 
     public boolean isEmpty() {
-        return (this.head == null);
+        return this.head == null;
     } //якщо у колеції нема елементів то повертає true
 
 
