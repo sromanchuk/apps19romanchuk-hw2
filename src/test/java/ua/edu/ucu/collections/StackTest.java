@@ -20,18 +20,14 @@ public class StackTest {
         Stack new_stack = new Stack();
         new_stack.push(1);
         new_stack.push(2);
-        new_stack.push(3);
         Object actualResult = new_stack.pop();
-        assertEquals(3, actualResult);
-        assertEquals("2, 1", new_stack.toString());
+        assertEquals(2, actualResult);
     }
 
     @Test
     public void testPush() {
         Stack new_stack = new Stack();
         new_stack.push(1);
-        new_stack.push(2);
-        new_stack.push(3);
-        assertEquals("3, 2, 1", new_stack.toString());
+        assertEquals("1", new_stack.toString());
     }
 }
