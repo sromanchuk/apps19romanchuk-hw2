@@ -258,7 +258,7 @@ public class ImmutableLinkedList {
     public int indexOf(Object e) {
         ImmutableLinkedList.LLNode currNode = this.head;
         int count = 0;
-        while(currNode != null) {
+        while (currNode != null) {
             if (currNode.getValue() == e) {
                 return count;
             }
@@ -308,7 +308,7 @@ public class ImmutableLinkedList {
         String out = "";
         for (int i = 0; i < this.size(); i++) {
             out += array[i] + "";
-            if (i < this.size() - 1){
+            if (i < this.size() - 1) {
                 out += ", ";
             }
         }
