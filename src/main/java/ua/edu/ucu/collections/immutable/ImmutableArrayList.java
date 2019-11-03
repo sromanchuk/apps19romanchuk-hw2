@@ -47,7 +47,7 @@ public class ImmutableArrayList implements ImmutableList {
     }
 
 
-    public ImmutableArrayList addAll(Object[] c){
+    public ImmutableArrayList addAll(Object[] c) {
 
         Object[] array = Arrays.copyOf(this.array, this.length+c.length);
 
@@ -60,7 +60,7 @@ public class ImmutableArrayList implements ImmutableList {
 
     public ImmutableArrayList addAll(int index, Object[] c) {
 
-        if (index > this.length){
+        if (index > this.length) {
             throw new IndexOutOfBoundsException("Unable to add element:"
                     + " index is out of bounds!");
         }
