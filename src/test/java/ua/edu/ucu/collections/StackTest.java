@@ -23,7 +23,7 @@ public class StackTest {
         new_stack.push(3);
         Object actualResult = new_stack.pop();
         assertEquals(3, actualResult);
-        assertEquals("1, 2", new_stack.toString());
+        assertEquals("2, 1", new_stack.toString());
     }
 
     @Test
@@ -32,6 +32,6 @@ public class StackTest {
         new_stack.push(1);
         new_stack.push(2);
         new_stack.push(3);
-        assertEquals("1, 2, 3", new_stack.toString());
+        assertEquals("3, 2, 1", new_stack.toString());
     }
 }
