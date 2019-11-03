@@ -136,7 +136,7 @@ public class ImmutableLinkedList {
         ImmutableLinkedList newList = this.clone();
         ImmutableLinkedList.LLNode currNode = newList.head;
         ImmutableLinkedList.LLNode previous = null;
-        ImmutableLinkedList.LLNode newNode;
+//         ImmutableLinkedList.LLNode newNode;
 
         for (int i = 0; i < index && currNode != null; i++) {
             previous = currNode;
