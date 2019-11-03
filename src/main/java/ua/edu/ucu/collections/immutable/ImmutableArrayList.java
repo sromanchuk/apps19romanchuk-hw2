@@ -1,6 +1,5 @@
 package ua.edu.ucu.collections.immutable;
 
-import java.io.*;
 import java.lang.*;
 import java.util.*;
 
@@ -34,7 +33,8 @@ public class ImmutableArrayList implements ImmutableList {
 
     public ImmutableArrayList add(int index, Object e) {
         if (index > this.length){
-            throw new IndexOutOfBoundsException("Unable to add element: index is out of bounds!");
+            throw new IndexOutOfBoundsException("Unable to add element:" +
+                    " index is out of bounds!");
         }
 
         Object[] array = Arrays.copyOf(this.array, this.length+1);
@@ -44,10 +44,10 @@ public class ImmutableArrayList implements ImmutableList {
         array[index] = e;
         ImmutableArrayList newList = new ImmutableArrayList(array);
         return newList;
-    } //додає елемент до колекції за індексом, та кидає виключну ситуацію, якщо індекс виходить за межі колекції
+    }
 
 
-    public ImmutableArrayList addAll(Object[] c){ //додає масив елементів у кінець колекції
+    public ImmutableArrayList addAll(Object[] c){
 
         Object[] array = Arrays.copyOf(this.array, this.length+c.length);
 
@@ -61,7 +61,8 @@ public class ImmutableArrayList implements ImmutableList {
     public ImmutableArrayList addAll(int index, Object[] c) {
 
         if (index > this.length){
-            throw new IndexOutOfBoundsException("Unable to add element: index is out of bounds!");
+            throw new IndexOutOfBoundsException("Unable to add element:" +
+                    " index is out of bounds!");
         }
 
         Object[] array = Arrays.copyOf(this.array, this.length+c.length);
@@ -75,20 +76,21 @@ public class ImmutableArrayList implements ImmutableList {
         ImmutableArrayList newList = new ImmutableArrayList(array);
         return newList;
 
-    } // додає масив елементів починаючи з зазначеного індекса, та кидає виключну ситуацію, якщо індекс виходить за межі колекції
-
+    }
 
 
     public Object get(int index) {
         if (index >= this.length) {
-            throw new IndexOutOfBoundsException("Unable to add element: index is out of bounds!");
+            throw new IndexOutOfBoundsException("Unable to add element:" +
+                    " index is out of bounds!");
         }
         return this.array[index];
-    } //повертає елемент за індексом, та кидає виключну ситуацію, якщо індекс виходить за межі колекції
+    }
 
     public ImmutableArrayList remove(int index) {
         if (index >= this.length) {
-            throw new IndexOutOfBoundsException("Unable to add element: index is out of bounds!");
+            throw new IndexOutOfBoundsException("Unable to add element:" +
+                    " index is out of bounds!");
         }
         Object[] array = Arrays.copyOf(this.array, this.length);
         for (int i = index; i < this.length - 1; i++)
@@ -99,17 +101,18 @@ public class ImmutableArrayList implements ImmutableList {
         ImmutableArrayList newList = new ImmutableArrayList(arrayRm);
         return newList;
 
-    } //видаляє елемент за індексом, та кидає виключну ситуацію, якщо індекс виходить за межі колекції
+    }
 
     public ImmutableArrayList set(int index, Object e){
         if (index >= this.length) {
-            throw new IndexOutOfBoundsException("Unable to add element: index is out of bounds!");
+            throw new IndexOutOfBoundsException("Unable to add element:" +
+                    " index is out of bounds!");
         }
         Object[] array = Arrays.copyOf(this.array, this.length);
         array[index] = e;
         ImmutableArrayList newList = new ImmutableArrayList(array);
         return newList;
-    } //змінює значення елементу за індексом, та кидає виключну ситуацію, якщо індекс виходить за межі колекції
+    }
 
     public int indexOf(Object e) {
         for (int i = 0; i < this.length; i++){
@@ -118,7 +121,7 @@ public class ImmutableArrayList implements ImmutableList {
             }
         }
         return -1;
-    } //шукає індекс елемента (повертає індекс першого який знайшов, або -1 у випадку відсутності)
+    }
 
     public int size() {
         return this.length;
