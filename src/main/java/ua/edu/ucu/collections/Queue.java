@@ -1,7 +1,6 @@
 package ua.edu.ucu.collections;
 import ua.edu.ucu.collections.immutable.ImmutableLinkedList;
 import java.lang.*;
-import java.util.*;
 
 
 public class Queue {
