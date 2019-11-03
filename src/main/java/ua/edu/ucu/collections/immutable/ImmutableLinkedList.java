@@ -1,7 +1,6 @@
 package ua.edu.ucu.collections.immutable;
 
 import java.lang.*;
-import java.util.*;
 
 public class ImmutableLinkedList {
 
