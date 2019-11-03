@@ -122,7 +122,7 @@ public class ImmutableLinkedList {
 
     public ImmutableLinkedList addAll(Object[] c) {
         ImmutableLinkedList newList = this.clone();
-        for (int i = 0; i < c.length; i++){
+        for (int i = 0; i < c.length; i++) {
             newList = newList.addLast(c[i]);
         }
         return newList;
