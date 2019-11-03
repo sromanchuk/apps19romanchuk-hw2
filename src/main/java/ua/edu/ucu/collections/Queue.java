@@ -9,24 +9,24 @@ public class Queue {
     private ImmutableLinkedList queue = new ImmutableLinkedList();
 
 
-    public Object peek(){
+    public Object peek() {
 
         return this.queue.getFirst();
     }
 
-    public Object dequeue(){
+    public Object dequeue() {
 
         Object first = queue.getFirst();
         this.queue = this.queue.removeFirst();
         return first;
     }
 
-    public void enqueue(Object e){
+    public void enqueue(Object e) {
         this.queue = this.queue.addLast(e);
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.queue.toString();
     }
 }
