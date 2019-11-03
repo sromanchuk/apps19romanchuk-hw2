@@ -1,7 +1,5 @@
 package ua.edu.ucu.collections.immutable;
-import java.io.*;
 import java.lang.*;
-import java.util.*;
 
 // У результаті змін, що призводять на модифікації
 //(зміну стану) колекції має повртатись нова колекція
