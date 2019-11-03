@@ -7,24 +7,24 @@ public class Stack {
     private ImmutableLinkedList stack = new ImmutableLinkedList();
 
 
-    public Object peek(){
+    public Object peek() {
 
         return this.stack.getFirst();
     }
 
-    public Object pop(){
+    public Object pop() {
 
         Object first = stack.getFirst();
         this.stack = this.stack.removeFirst();
         return first;
     }
 
-    public void push(Object e){
+    public void push(Object e) {
         this.stack = this.stack.addFirst(e);
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.stack.toString();
     }
 }
